@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+     <style>
+       body {
+         font-family: Arial, sans-serif;
+       }
+       canvas {
+         max-width: 700px;
+         margin: 0 auto;
+       }
+     </style>
+   
+    
+</head>
+
+<body style="background-color: #F6F7F8">
+
+   <nav class="navbar">
+
+       <div class="leftside">
+           <img class="logo" src="images/Navbar/TestLogo.svg" alt="Logo">
+       </div>
+
+       <div class="middle">
+        <ul>
+            <li class="icon1"><img src="images/Navbar/middle/home.svg" alt="Overview Logo"> Overview</li>
+            <li class="active"><img src="images/Navbar/middle/group.svg" alt="Patients Logo"> Patients</li>
+            <li class="icon3"><img src="images/Navbar/middle/calendar.svg" alt="Schedule Logo"> Schedule</li>
+            <li class="icon4"><img src="images/Navbar/middle/chat.svg" alt="Message Logo"> Message</li>
+            <li class="icon5"><img src="images/Navbar/middle/credit.svg" alt="Transactions Logo"> Transactions</li>
+        </ul>
+     
+       </div>
+
+       <div class="rightside" >
+           <img class="small-pic" src="images/Navbar/senior.png" > 
+           <div class="text-container">
+               <span class="text-icon" style="font-weight: bold;">Dr. Jose Simmons</span>
+               <span class="text-icon" style="color: #707070;">General Practitioner</span>
+           </div>
+           <hr class="line"> 
+           <img class="small-icon" src="images/Navbar/settings.svg" >
+           <img class="dots" src="images/Navbar/line.svg" >
+       </div>
+
+   </nav>
+
+
+<div class="Home" style="display: flex; gap: 20px;">
+
+
+
+  <div class="leftcard-header">
+
+    <div style="display: flex; justify-content: space-between; align-items: center;padding: 20px;" >
+        <h1 class="heading">Patients</h1> 
+        <img class="search-icon "src="images/leftcard/Search.svg" alt="Patients Icon" class="patients-icon">
+      
+    </div>
+
+    <div class="card-content" style="overflow-y: auto; max-height: 900px;">
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Layer 8.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Emily Williams</span>
+                    <span class="text-icon" style="color: #707070;">Female, 18</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Ryan Johnson.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column;align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Ryan Johnson</span>
+                    <span class="text-icon" style="color: #707070;">Male, 45</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Brandon Mitchell.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column;align-items: flex-start;  margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Brandon Mitchell</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" id="jessicaTaylorEntry" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px; cursor: pointer;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Jessica Taylor.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Jessica Taylor</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Samantha Johnson.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column; align-items: flex-start;align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Samantha Johnson</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <img class="left-icon" src="images/leftcard/Ashley Martinez.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Ashley Martinez</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Olivia Brown.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Olivia Brown</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Tyler Davis.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column;align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Tyler Davis</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Kevin Anderson.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Kevin Anderson</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Dylan Thompson.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column;align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Dylan Thompson</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+        <div class="icon-container" style="display: flex; flex-direction: row;  justify-content: space-between; margin-top: 10px;">
+            <div style="display: flex; align-items: center;">
+                <div class="left-side" style="display: flex; flex-direction: column; align-items: center;">
+                    <img class="left-icon" src="images/leftcard/Mike Nolan.png" alt="Left Icon">
+                </div>
+                <div class="text-container" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 10px;"> 
+                    <span class="text-icon" style="font-weight: bold;">Mike Nolan</span>
+                    <span class="text-icon" style="color: #707070;">Male, 36</span>
+                </div>
+            </div>
+            <img class="right-icon" src="./images/leftcard/hori.svg" alt="Right Icon">
+        </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="hero">
+    <h1 class="headinghero">Diagnosis History</h1> 
+
+    <div class="chart" style=" display: flex;gap: 60px;">
+
+         <div style="  width: 417px;">
+    
+        <div  style="display: flex; justify-content: space-between; width:450px;">
+
+              <div style="font-size: 20px; font-weight: bolder;">Blood Pressure</div>
+              <div style="display: flex; align-items: center; gap: 5px;">
+
+
+                <div>Last 6 months</div>
+                <img src="images/hero/downarrow.svg" alt="Calendar Icon" style="width: 16px; height: 16px;">
+              </div>
+
+        </div>
+
+ <div >   <canvas id="myChart" class="mychart"  ></canvas> </div>
+ 
+</div>
+
+
+
+
+<div style=" display: flex; flex-direction: column; gap: 20px;">
+
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center;">
+            <div style="width: 14px; height: 14px; background-color:#E66FD2; border-radius: 50%; margin-right: 5px;"></div>
+            <span style="font-weight: bold;">Systolic</span>
+        </div>
+        <span style="font-size:25px; font-weight: bold;">160</span>
+        <div style="display: flex; align-items: center;">
+            <img src="images/hero//ArrowDown.svg" alt="Left Icon" style="margin-right: 5px;">
+            <span style="font-weight: bold;">Higher than Average</span>
+        </div>
+    </div>
+    <div style=" width: 208px; height: 1px; background: var(--unnamed-color-cbc8d4) 0% 0% no-repeat padding-box; background: #CBC8D4 0% 0% no-repeat padding-box; opacity: 1;"></div>
+
+    <div style="display: flex; justify-content: space-between; align-items: left;flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center;">
+            <div style="width: 14px; height: 14px; background-color: #8C6FE6; border-radius: 50%; margin-right: 5px;"></div>
+            <span style="font-weight: bold;">Diastolic</span>
+        </div>
+        <span  style="font-size:25px; font-weight: bold;">78</span>
+        <div style="display: flex; align-items: center;">
+            <img src="images/hero/ArrowUp.svg" alt="Left Icon" style="margin-right: 5px;">
+            <span style="font-weight: bold;">Lower than Average</span>
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+<div style="display: flex; gap: 40px; margin-top: 20px;">
+
+
+<div style="width: 228px; height: 242px; background-color: #E0F3FA;border-radius: 12px; ">
+
+<div style="display: flex; flex-direction: column; padding: 15px;gap: 5px;">
+
+    <img src="images/hero/respiratory rate.svg" alt="Description of the image" style="width: 96px;height: 96px;">
+    <span style="font-weight: bold;">Respiratory Rate</span>
+    <span style="font-weight:bold;font-size: 30px;">20 bpm</span> 
+
+</div>
+
+<div style="text-align: left; padding: 15px;">
+    <span >Normal</span>
+</div>
+
+</div>
+
+
+
+<div style="width: 228px; height: 242px; background-color: #FFE6E9;border-radius: 12px; ">
+
+    <div style="display: flex; flex-direction: column; padding: 15px;gap: 5px;">
+    
+        <img src="images/hero/temperature.svg" alt="Description of the image" style="width: 96px;height: 96px;">
+        <span style="font-weight: bold;">Temperature</span>
+        <span style="font-weight:bold;font-size: 30px;">98.6°F</span> 
+    
+    </div>
+    
+    <div style="text-align: left; padding: 15px;">
+        <span >Normal</span>
+    </div>
+    
+    </div>
+
+    <div style="width: 228px; height: 242px; background-color: #FFE6E9;border-radius: 12px; ">
+
+        <div style="display: flex; flex-direction: column; padding: 15px;gap: 5px;">
+        
+            <img src="images/hero/HeartBPM.svg" alt="Description of the image" style="width: 96px;height: 96px;">
+            <span style="font-weight: bold;">Heart Rate</span>
+            <span style="font-weight:bold;font-size: 30px;">78 bpm</span> 
+        
+        </div>
+        
+        <div style="display: flex; align-items: center; text-align: left; padding: 15px;">
+            <img src="images/hero/ArrowDown.svg" alt="Icon" style="width: 16px; height: 16px; margin-right: 5px;">
+            <span >lower than Average</span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="herolower">
+
+<div><h1>Diagnostic List</h1></div>
+
+    <div style="border-radius: 24px;opacity: 1;"  id="diagnosticListContainer"> </div>
+
+ 
+ </div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="right-card">
+
+    <div id="profileContainer" style="display: none; flex-direction: column; align-items: center; margin-top: 20px;">
+        <img src="images/hero/Jessica Taylor.png" alt="Profile Picture" style="width: 200px; height: 200px; border-radius: 50%;">
+        <span style="font-weight: bold; margin-top: 20px; font-size: 20px;" id="name">Jessica Taylor</span> 
+    </div>
+
+
+<div id="patientDetails" style="margin-top: 20px; display: none;"> 
+    <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; gap: 10px; padding: 20px;">
+            <div>
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="images/rightcard/BirthIcon.svg" alt="Icon" style="width: 42px; height: 42px; margin-right: 5px;">
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <span>Date Of Birth</span>
+                <span id="dateOfBirth"></span> 
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; padding: 20px;">
+            <div>
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="images/rightcard/FemaleIcon.svg" alt="Icon" style="width: 42px; height: 42px; margin-right: 5px;">
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <span>Gender</span>
+                <span id="gender"></span> 
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; padding: 20px;">
+            <div>
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="images/rightcard/PhoneIcon.svg" alt="Icon" style="width: 42px; height: 42px; margin-right: 5px;">
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <span>Contact Info.</span>
+                <span id="contactInfo"></span> 
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; padding: 20px;">
+            <div>
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="images/rightcard/PhoneIcon.svg" alt="Icon" style="width: 42px; height: 42px; margin-right: 5px;">
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <span>Emergency Contacts</span>
+                <span id="emergencyContact"></span> 
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; padding: 20px;">
+            <div>
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="images/rightcard/InsuranceIcon.svg" alt="Icon" style="width: 42px; height: 42px; margin-right: 5px;">
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <span>Insurance Provider</span>
+                <span id="insuranceProvider"></span> 
+            </div>
+        </div>
+    </div>
+</div>
+      
+
+
+<div id="labResultsSection" style="width: 327px; height: 296px; background-color: #FFFFFF; border-radius: 16px; padding: 20px; display: none;"> 
+    <h1 style="font-size: 24px; margin-bottom: 16px; padding: 0px 20px;">Lab Results</h1>
+    <div id="labResultsContainer">
+        
+    </div>
+</div>
+
+<!-- <div style="width: 327px; height: 296px; background-color: #FFFFFF; border-radius: 16px;padding: 20px; ">
+    <h1 style="font-size: 24px; margin-bottom: 16px; padding:0px 20px;">Lab Results</h1>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 13px;
+        margin-bottom: 5px; padding: 0px 20px;
+        " class="hoverable">
+        <p>Blood Tests</p>
+        <img src="/images/rightcard/download.svg" alt=""
+            style="width: 20px; height: 20px;">
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 13px;
+        margin-bottom: 5px; padding: 0px 20px;
+        " class="hoverable">
+        <p>CT Scans</p>
+        <img src="/images/rightcard/download.svg" alt=""
+            style="width: 20px; height: 20px;">
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 13px;
+        margin-bottom: 5px; padding: 0px 20px;
+        " class="hoverable">
+        <p>Radiology Reports</p>
+        <img src="/images/rightcard/download.svg" alt=""
+            style="width: 20px; height: 20px;">
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 13px;
+        margin-bottom: 5px; padding: 0px 20px;
+        " class="hoverable">
+        <p>X-Rays</p>
+        <img src="/images/rightcard/download.svg" alt=""
+            style="width: 20px; height: 20px;">
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 13px;
+        margin-bottom: 5px; padding: 0px 20px;
+        " class="hoverable">
+        <p>Urine Test</p>
+        <img src="/images/rightcard/download.svg" alt=""
+            style="width: 20px; height: 20px;">
+    </div>
+</div> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+   
+    const labels = ['Oct 2023', 'Nov 2023', 'Dec 2023', 'Jan 2024', 'Feb 2024', 'Mar 2024']; 
+    const datapoints = [120, 110, 160, 110, 150, 160, 140]; 
+    const linearDatapoints = [110, 65, 110, 90, 75, 80, 100]; 
+    
+
+
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          data: datapoints,
+          borderColor: '#E66FD2', 
+          fill: false,
+          cubicInterpolationMode: 'monotone',
+          tension: 0.8,
+          pointRadius: 7, 
+          pointBackgroundColor: '#E66FD2', 
+        },
+        {
+          data: linearDatapoints,
+          borderColor: '#8C6FE6', 
+          fill: false,
+          cubicInterpolationMode: 'monotone',
+          tension: 0.8,
+          pointRadius: 7, 
+          pointBackgroundColor: '#8C6FE6', 
+        },
+      ],
+    };
+
+   
+    const config = {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }, 
+          title: { display: false },  
+        },
+        interaction: {
+          intersect: true,
+        },
+        scales: {
+x: {
+display: true,  
+grid: {
+  display: false 
+},
+
+ticks: {
+  display: true, 
+}
+},
+          y: {
+            display: true,
+            title: { display: true },
+            ticks: {
+              callback: function(value) {
+                const valuesToShow = [60, 80, 100, 120, 140, 160, 180];
+                return valuesToShow.includes(value) ? value : ''; 
+              }
+            },
+            min: 60, 
+            max: 180, 
+          }
+        }
+      }
+    };
+
+
+    const myChart = new Chart(document.getElementById('myChart'), config);
+  </script>
+
+
+
+
+
+
+
+<script>
+
+    const apiUrl = 'https://fedskillstest.coalitiontechnologies.workers.dev';
+    const username = 'coalition';
+    const password = 'skills-test';
+    const auth = btoa(`${username}:${password}`); 
+
+  
+    function fetchData() {
+    fetch(apiUrl, {
+        headers: {
+            'Authorization': `Basic ${auth}`
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Network response was not ok.');
+    })
+    .then(data => {
+        
+        const jessicaData = data.find(patient => patient.name === 'Jessica Taylor');
+        if (jessicaData) {
+           
+            document.getElementById('dateOfBirth').innerText = jessicaData.date_of_birth;
+            document.getElementById('gender').innerText = jessicaData.gender;
+            document.getElementById('contactInfo').innerText = jessicaData.phone_number;
+            document.getElementById('emergencyContact').innerText = jessicaData.emergency_contact;
+            document.getElementById('insuranceProvider').innerText = jessicaData.insurance_type;
+          
+
+            
+            const labResultsContainer = document.getElementById('labResultsContainer');
+            labResultsContainer.innerHTML = ''; 
+
+            const diagnosticListContainer = document.getElementById('diagnosticListContainer');
+            diagnosticListContainer.innerHTML = ''; 
+
+           
+            if (Array.isArray(jessicaData.lab_results)) {
+                jessicaData.lab_results.forEach(result => {
+                    const resultDiv = document.createElement('div');
+                    resultDiv.style.display = 'flex';
+                    resultDiv.style.flexDirection = 'row';
+                    resultDiv.style.justifyContent = 'space-between';
+                    resultDiv.style.alignItems = 'center';
+                    resultDiv.style.fontSize = '13px';
+                    resultDiv.style.marginBottom = '5px';
+                    resultDiv.style.padding = '0px 20px';
+                    resultDiv.className = 'hoverable'; 
+                    resultDiv.innerHTML = `
+                        <p>${result}</p> <!-- Display the lab result -->
+                        <img src="/images/rightcard/download.svg" alt="" style="width: 20px; height: 20px;">
+                    `;
+            
+                    labResultsContainer.appendChild(resultDiv);
+                });
+            } else {
+                console.error('Lab results are not available or not in the expected format.');
+            }
+
+    
+            if (Array.isArray(jessicaData.diagnostic_list)) {
+                jessicaData.diagnostic_list.forEach((diagnosis, index) => {
+                    const diagnosisDiv = document.createElement('div');
+                    diagnosisDiv.id = `diagnosis-${index}`;
+                    diagnosisDiv.style.display = 'flex';
+                    diagnosisDiv.style.flexDirection = 'row';
+                    diagnosisDiv.style.justifyContent = 'space-between';
+                    diagnosisDiv.style.alignItems = 'left';
+                    diagnosisDiv.style.fontSize = '18px';
+                    diagnosisDiv.style.marginBottom = '5px';
+                    diagnosisDiv.style.padding = '0px 20px';
+                    diagnosisDiv.className = 'hoverable'; 
+                    
+                    diagnosisDiv.innerHTML = `
+                 
+                    <p>${diagnosis.name}</p>
+                    <p>${diagnosis.description}</p>
+                    <p>${diagnosis.status}</p>
+
+                      
+                    `;
+            
+                    diagnosticListContainer.appendChild(diagnosisDiv);
+                });
+            } else {
+                console.error('Diagnostic list is not available or not in the expected format.');
+            }
+
+           
+            document.getElementById('profileContainer').style.display = 'flex';
+            document.getElementById('patientDetails').style.display = 'block'; 
+            document.getElementById('labResultsSection').style.display = 'block'; 
+            document.getElementById('diagnosticListSection').style.display = 'block'; 
+        } else {
+            document.getElementById('apiResponse').innerText = 'Jessica Taylor not found';
+        }
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+        document.getElementById('apiResponse').innerText = 'Error fetching data';
+    });
+}
+
+    document.getElementById('jessicaTaylorEntry').addEventListener('click', fetchData);
+</script>
+
+
+
+
+
+<!-- <script>
+let username = 'coalition'; // Your username
+let password = 'skills-test';       // Your password
+
+let auth = btoa(`${username}:${password}`);
+
+console.log('Authorization Key:', auth);
+
+fetch('https://fedskillstest.coalitiontechnologies.workers.dev', {
+    method: 'GET',
+    headers: {
+        'Authorization': `Basic ${auth}`,  // Use the generated auth key here
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json(); // Parse the JSON data
+})
+.then(data => {
+    console.log('Data fetched:', data);  // Log the data to the console
+    console.log('All About jessica taylor:', data[3]);
+    console.log('Name:', data[3].name);
+    console.log('age:', data[3].age);
+    console.log('Dob:', data[3].date_of_birth);
+    console.log('gender:', data[3].gender);
+   
+    console.log('phone number:', data[3].phone_number);
+    console.log('profile pic:', data[3].profile_picture);
+    console.log('insurance type:', data[3].insurance_type );
+    console.log('emergency contact:', data[3].emergency_contact);
+    console.log('lab_results:', data[3].lab_results);
+
+})
+.catch(error => {
+    console.error('Error fetching data:', error);
+});
+</script> -->
+
+
+
+
+    
+  </div>
+</div>
+   
+
+</body>
+</html>
